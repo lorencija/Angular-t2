@@ -1,3 +1,26 @@
 <div class="container">
         <a routerLink="/list">Back to List</a>
 </div>
+
+<div class="container">
+        <form #carPlateForm="ngForm" (ngSubmit)="saveCarPlate()">
+                <div class="form-group">
+                        <label for="inputID">ID</label>
+                        <input type="text" class="form-control" id="inputID" value={{listNumber}} [(ngModel)]="carPlate.id" disabled>
+                </div>
+                <div class="form-group">
+                        <label for="inputCarPlate">Car Plate</label>
+                        <input type="text" class="form-control" id="inputCarPlate" [(ngModel)]="carPlate.nr" name="carNumber">
+                </div>
+                <div class="form-group">
+                        <label for="inputName">Name</label>
+                        <input type="text" class="form-control" id="inputName" [(ngModel)]="carPlate.name" name="firstName">
+                </div>
+                <div class="form-group">
+                        <label for="inputSurname">Surname</label>
+                        <input type="text" class="form-control" id="inputSurname" [(ngModel)]="carPlate.surname" name="lastName">
+                </div>
+                <input type="submit" value="Save" class="buttonSave">
+        </form>
+</div>
+console.log({{carPlate}});

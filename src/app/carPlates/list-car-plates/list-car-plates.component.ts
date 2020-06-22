@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CarPlate } from '../../models/carPlate.model';
-import myData from '../../../assets/data.json';
+import { CarPlateService } from '../../carPlates/carPlate.service';
 
 @Component({
   templateUrl: './list-car-plates.component.html',
@@ -8,11 +8,12 @@ import myData from '../../../assets/data.json';
 })
 export class ListCarPlatesComponent implements OnInit {
 
-carPlates: CarPlate [] = myData;
+carPlates: CarPlate [];
 
-  constructor() { }
+  constructor(private _carPlateservise: CarPlateService) { }
 
   ngOnInit(): void {
+    this.carPlates = this._carPlateservise.getCarPlates();
   }
 
 }

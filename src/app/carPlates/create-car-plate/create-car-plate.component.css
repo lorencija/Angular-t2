@@ -1,0 +1,26 @@
+form {
+    margin-top: 20px;
+}
+
+.form-control:focus {
+    border-color: #56a0a8;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(2, 70, 56, 0.6);
+}
+.buttonSave {
+    margin: 1% 0 5%;
+    padding: 5px 60px;
+    background-color: white;
+    color: #1f636b;
+    font-weight: bold;
+    border-style: solid;
+    border-color: #1f636b;
+    border-radius: 10px;
+}
+.buttonSave:focus {
+    outline: 0;
+}
+.buttonSave:hover{
+    background-color: #56a0a8;
+    color: white;
+    border-color: white;
+ }

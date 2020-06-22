@@ -1,0 +1,22 @@
+<div class="container">
+    <a routerLink="/create">Create New Item</a>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">No</th>
+      <th scope="col">Car Plate</th>
+      <th scope="col">Name</th>
+      <th scope="col">Surname</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let plate of carPlates">
+      <th scope="row">{{plate.id}}</th>
+      <td>{{plate.nr}}</td>
+      <td>{{plate.name}}</td>
+      <td>{{plate.surname}}</td>
+    </tr>
+  </tbody>
+</table>

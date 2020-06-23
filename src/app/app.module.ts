@@ -8,6 +8,7 @@ import { ListCarPlatesComponent } from './carPlates/list-car-plates/list-car-pla
 import { CreateCarPlateComponent } from './carPlates/create-car-plate/create-car-plate.component';
 import { CarPlateService } from './carPlates/carPlate.service';
 import { EditCarPlateComponent } from './carPlates/edit-car-plate/edit-car-plate.component';
+import { CarPlateFilterPipe } from './carPlates/car-plate-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { EditCarPlateComponent } from './carPlates/edit-car-plate/edit-car-plate
     ListCarPlatesComponent,
     CreateCarPlateComponent,
     EditCarPlateComponent,
+    CarPlateFilterPipe
   ],
   imports: [
     BrowserModule,

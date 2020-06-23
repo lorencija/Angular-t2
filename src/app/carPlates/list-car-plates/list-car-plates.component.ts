@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./list-car-plates.component.css']
 })
 export class ListCarPlatesComponent implements OnInit {
+  searchTerm: string;
   carPlates: CarPlate [];
 @Input() carplate: CarPlate;
 

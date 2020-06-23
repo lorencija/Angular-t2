@@ -24,3 +24,8 @@ form {
     color: white;
     border-color: white;
  }
+ .buttonSave:disabled{
+    background-color: rgb(241, 237, 241);
+    color: #56a0a8;
+    border-color: #56a0a8;
+ }

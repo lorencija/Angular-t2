@@ -6,20 +6,37 @@
         <form #carPlateForm="ngForm" (ngSubmit)="saveCarPlate()">
                 <div class="form-group">
                         <label for="inputID">ID</label>
-                        <input type="text" class="form-control" id="inputID" value={{listNumber}} [(ngModel)]="carPlate.id" disabled>
+                        <input type="text" class="form-control" id="inputID" value={{listNumber}}
+                         [(ngModel)]="carPlate.id" name="carId" disabled>
                 </div>
-                <div class="form-group">
+                <div class="form-group" [class.has-error]="carPlateControl.invalid && carPlateControl.touched"> 
                         <label for="inputCarPlate">Car Plate</label>
-                        <input type="text" class="form-control" id="inputCarPlate" [(ngModel)]="carPlate.nr" name="carNumber">
+                        <input type="text" required pattern="^[A-Z]{3}\d{3}$|EV\d{4}$"
+                        class="form-control" id="inputCarPlate" 
+                        [(ngModel)]="carPlate.nr" name="carNumber" #carPlateControl="ngModel">
+                        <span class="help-block" *ngIf="carPlateControl.errors?.required && carPlateControl.touched">
+                        Car Plate Number required!
+                        </span>
+                        <span class="help-block" *ngIf="carPlateControl.errors?.pattern && carPlateControl.touched">
+                        Car Plate Number is invalide, letters should be CAPITAL!
+                        </span>
                 </div>
-                <div class="form-group">
+                <div class="form-group" [class.has-error]="nameControl.invalid && nameControl.touched">
                         <label for="inputName">Name</label>
-                        <input type="text" class="form-control" id="inputName" [(ngModel)]="carPlate.name" name="firstName">
+                        <input type="text" required class="form-control" id="inputName"
+                         [(ngModel)]="carPlate.name" name="firstName" #nameControl="ngModel">
+                         <span class="help-block" *ngIf="nameControl.errors?.required && nameControl.touched">
+                                Name is required!
+                        </span>
                 </div>
-                <div class="form-group">
+                <div class="form-group" [class.has-error]="surnameControl.invalid && surnameControl.touched">
                         <label for="inputSurname">Surname</label>
-                        <input type="text" class="form-control" id="inputSurname" [(ngModel)]="carPlate.surname" name="lastName">
+                        <input type="text" required class="form-control" id="inputSurname" 
+                        [(ngModel)]="carPlate.surname" name="lastName" #surnameControl="ngModel">
+                        <span class="help-block" *ngIf="surnameControl.errors?.required && surnameControl.touched">
+                                Surname is required!
+                        </span>
                 </div>
-                <input type="submit" value="Save" class="buttonSave">
+                <input type="submit" value="Save" class="buttonSave" [disabled]=carPlateForm.invalid>
         </form>
 </div>

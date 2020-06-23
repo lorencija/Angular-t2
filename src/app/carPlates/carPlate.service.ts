@@ -20,7 +20,16 @@ export class CarPlateService {
     }
 
     getLength(): number {
-        return this.listCarPlates.length;
+        let i: number;
+        let maxValue = this.listCarPlates[0];
+        let max = maxValue.id;
+        for (i = 1; i < this.listCarPlates.length; i++) {
+            let element = this.listCarPlates[i]; 
+            if (maxValue.id < element.id) {
+                max=element.id;
+            } 
+        }
+        return max;
     }
 
     deleteCarPlate(id: number) {

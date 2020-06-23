@@ -16,5 +16,29 @@
       "nr": "KDZ853",
       "name": "Rita",
       "surname": "Mailute"
+     },
+     {
+      "id": 4,
+      "nr": "EV9876",
+      "name": "Tadas",
+      "surname": "Tadauskas"
+     },
+     {
+      "id": 5,
+      "nr": "SDT709",
+      "name": "Kazys",
+      "surname": "Kazinis"
+     },
+     {
+      "id": 6,
+      "nr": "UKO678",
+      "name": "Vytas",
+      "surname": "Vytauskas"
+     },
+     {
+      "id": 7,
+      "nr": "EV0853",
+      "name": "Ona",
+      "surname": "Tarabilda"
      }
   ]

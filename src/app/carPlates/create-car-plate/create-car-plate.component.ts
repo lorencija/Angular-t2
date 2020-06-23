@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { CarPlate } from '../../models/carPlate.model';
 import { CarPlateService } from '../carPlate.service';
 import { Router } from '@angular/router';

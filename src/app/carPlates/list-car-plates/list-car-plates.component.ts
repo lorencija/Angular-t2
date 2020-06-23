@@ -1,19 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CarPlate } from '../../models/carPlate.model';
 import { CarPlateService } from '../../carPlates/carPlate.service';
+import { Router } from '@angular/router';
 
 @Component({
   templateUrl: './list-car-plates.component.html',
   styleUrls: ['./list-car-plates.component.css']
 })
 export class ListCarPlatesComponent implements OnInit {
+  carPlates: CarPlate [];
+@Input() carplate: CarPlate;
 
-carPlates: CarPlate [];
-
-  constructor(private _carPlateservise: CarPlateService) { }
+  constructor(private _carPlateServise: CarPlateService,
+              private _router: Router) { }
 
   ngOnInit(): void {
-    this.carPlates = this._carPlateservise.getCarPlates();
+    this.carPlates = this._carPlateServise.getCarPlates();
   }
 
+  editCarPlate(carPlateID: number) {
+    this._router.navigate(['/edit',carPlateID]);
+  }
+
+  deleteCarPlate(carPlateID: number) {
+    this._carPlateServise.deleteCarPlate(carPlateID);
+  }
 }

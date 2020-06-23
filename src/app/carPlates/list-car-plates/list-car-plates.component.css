@@ -1,3 +1,20 @@
 .table {
     margin-top: 20px;
 }
+
+button {
+    padding: 2.5px 15px;
+    background-color: white;
+    color: #1f636b;
+    border-style: solid;
+    border-color: #1f636b;
+    border-radius: 10px;
+}
+button:focus {
+    outline: 0;
+}
+button:hover{
+    background-color: #56a0a8;
+    color: white;
+    border-color: white;
+ }

@@ -9,6 +9,8 @@
       <th scope="col">Car Plate</th>
       <th scope="col">Name</th>
       <th scope="col">Surname</th>
+      <th scope="col"> </th>
+      <th scope="col"> </th>
     </tr>
   </thead>
   <tbody>
@@ -17,6 +19,8 @@
         <td>{{plate.nr}}</td>
         <td>{{plate.name}}</td>
         <td>{{plate.surname}}</td>
+        <td><button (click)="editCarPlate(plate.id)">Edit</button></td>
+        <td><button (click)="deleteCarPlate(plate.id)">Delete</button></td>
     </tr>
   </tbody>
 </table>

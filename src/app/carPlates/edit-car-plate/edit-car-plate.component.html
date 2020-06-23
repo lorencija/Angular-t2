@@ -3,22 +3,22 @@
 </div>
 
 <div class="container">
-        <form #carPlateForm="ngForm" (ngSubmit)="saveCarPlate()">
+        <form #carPlateForm="ngForm" (ngSubmit)="updateCarPlate()">
                 <div class="form-group">
                         <label for="inputID">ID</label>
-                        <input type="text" class="form-control" id="inputID" value={{listNumber}} [(ngModel)]="carPlate.id" disabled>
+                        <input type="text" class="form-control" id="inputID"  [(ngModel)]="carplate.id" name="carID"disabled>
                 </div>
                 <div class="form-group">
                         <label for="inputCarPlate">Car Plate</label>
-                        <input type="text" class="form-control" id="inputCarPlate" [(ngModel)]="carPlate.nr" name="carNumber">
+                        <input type="text" class="form-control" id="inputCarPlate" [(ngModel)]="carplate.nr" name="carNumber">
                 </div>
                 <div class="form-group">
                         <label for="inputName">Name</label>
-                        <input type="text" class="form-control" id="inputName" [(ngModel)]="carPlate.name" name="firstName">
+                        <input type="text" class="form-control" id="inputName" [(ngModel)]="carplate.name" name="firstName">
                 </div>
                 <div class="form-group">
                         <label for="inputSurname">Surname</label>
-                        <input type="text" class="form-control" id="inputSurname" [(ngModel)]="carPlate.surname" name="lastName">
+                        <input type="text" class="form-control" id="inputSurname" [(ngModel)]="carplate.surname" name="lastName">
                 </div>
                 <input type="submit" value="Save" class="buttonSave">
         </form>

@@ -5,6 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 You can start app by downloading files, unziping it.
 
 Write in terminal:
+
 npm i 
 
 ng serve -o

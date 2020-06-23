@@ -6,6 +6,7 @@ You can start app by downloading files, unziping it.
 
 Write in terminal:
 npm i 
+
 ng serve -o
 
 App missing:

@@ -10,10 +10,10 @@ import { Router } from '@angular/router';
 })
 export class CreateCarPlateComponent implements OnInit {
 
-  listNumber=this.getListNumber();
+  // listNumber=this.getListNumber();
 
   carPlate: CarPlate ={
-    id: this.listNumber,
+    id: null,
     nr: null,
     name: null,
     surname: null
@@ -26,12 +26,17 @@ export class CreateCarPlateComponent implements OnInit {
   }
 
   saveCarPlate(): void{
-    this._carPlateService.save(this.carPlate);
-    this._router.navigate(['list']);
+    const newCarPlate: CarPlate = Object.assign({}, this.carPlate);
+    this._carPlateService.addCarPlate(newCarPlate).subscribe(
+      (data: CarPlate) => {
+        console.log(data);
+        this._router.navigate(['list']);
+      }
+    );
   }
 
-  getListNumber(): any {
-   return this._carPlateService.getLength() + 1;
-  }
+  // getListNumber(): any {
+  //  return this._carPlateService.getLength() + 1;
+  // }
 
 }

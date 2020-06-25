@@ -1,0 +1,70 @@
+{
+  "carPlate": [
+    {
+      "id": 1,
+      "nr": "TRW879",
+      "name": "Rita",
+      "surname": "Zitauskaite"
+    },
+    {
+      "id": 2,
+      "nr": "JUL453",
+      "name": "Petras",
+      "surname": "Joninis"
+    },
+    {
+      "id": 3,
+      "nr": "KDZ853",
+      "name": "Rita",
+      "surname": "Mailute"
+    },
+    {
+      "id": 4,
+      "nr": "EV9876",
+      "name": "Tadas",
+      "surname": "Tadauskas"
+    },
+    {
+      "id": 5,
+      "nr": "SDT709",
+      "name": "Kazys",
+      "surname": "Kazinis"
+    },
+    {
+      "id": 6,
+      "nr": "UKO678",
+      "name": "Vytas",
+      "surname": "Vytauskas"
+    },
+    {
+      "id": 7,
+      "nr": "EV0853",
+      "name": "Ona",
+      "surname": "Tarabilda"
+    },
+    {
+      "id": 8,
+      "nr": "POU678",
+      "name": "Ona",
+      "surname": "Onutauskiene"
+    },
+    {
+      "id": 9,
+      "nr": "EV3464",
+      "name": "Jurate",
+      "surname": "Kalbute"
+    },
+    {
+      "id": 10,
+      "nr": "ERV678",
+      "name": "Laura",
+      "surname": "Jan"
+    },
+    {
+      "id": 11,
+      "nr": "TRW879",
+      "name": "Jonas",
+      "surname": "dasda"
+    }
+  ]
+}

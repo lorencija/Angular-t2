@@ -9,7 +9,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./edit-car-plate.component.css']
 })
 export class EditCarPlateComponent implements OnInit {
-  private selectedCarPlateId: number;
+  // private selectedCarPlateId: number;
   @Input() carplate: CarPlate;
   @Input() searchTerm: string;
 
@@ -33,18 +33,17 @@ export class EditCarPlateComponent implements OnInit {
         surname: null
       }
     } else {
-      this.carplate = this._carPlateservise.getCarPlate(id);
+      this._carPlateservise.getCarPlate(id).subscribe(
+        (carplate) => this.carplate = carplate
+      );
 
     }
   }
 
-  saveCarPlate(): void{
-    this._carPlateservise.save(this.carplate);
-    this._router.navigate(['list']);
-  }
-
   updateCarPlate(): void{
-    this._carPlateservise.update(this.carplate);
-    this._router.navigate(['list']);
-  }
+    this._carPlateservise.update(this.carplate).subscribe(
+      () => {
+        this._router.navigate(['list']);
+      }
+    )}
 }

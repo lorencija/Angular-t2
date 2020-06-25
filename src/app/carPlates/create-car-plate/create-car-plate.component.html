@@ -6,7 +6,7 @@
         <form #carPlateForm="ngForm" (ngSubmit)="saveCarPlate()">
                 <div class="form-group">
                         <label for="inputID">ID</label>
-                        <input type="text" class="form-control" id="inputID" value={{listNumber}}
+                        <input type="text" class="form-control" id="inputID" 
                          [(ngModel)]="carPlate.id" name="carId" disabled>
                 </div>
                 <div class="form-group" [class.has-error]="carPlateControl.invalid && carPlateControl.touched"> 

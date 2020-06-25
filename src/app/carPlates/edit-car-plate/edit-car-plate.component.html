@@ -4,6 +4,7 @@
 
 <div class="container">
         <form #carPlateForm="ngForm" (ngSubmit)="updateCarPlate()">
+             <div *ngIf="carplate">
                 <div class="form-group">
                         <label for="inputID">ID</label>
                         <input type="text" class="form-control" id="inputID"  [(ngModel)]="carplate.id" name="carID" disabled>
@@ -36,5 +37,6 @@
                         </span>
                 </div>
                 <input type="submit" value="Save" class="buttonSave" [disabled]=carPlateForm.invalid>
+            </div>
         </form>
 </div>

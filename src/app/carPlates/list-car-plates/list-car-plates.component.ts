@@ -16,7 +16,7 @@ export class ListCarPlatesComponent implements OnInit {
               private _router: Router) { }
 
   ngOnInit(): void {
-    this.carPlates = this._carPlateServise.getCarPlates();
+    this._carPlateServise.getCarPlates().subscribe(empList => this.carPlates = empList);
   }
 
   editCarPlate(carPlateID: number) {
@@ -24,6 +24,9 @@ export class ListCarPlatesComponent implements OnInit {
   }
 
   deleteCarPlate(carPlateID: number) {
-    this._carPlateServise.deleteCarPlate(carPlateID);
+    this._carPlateServise.deleteCarPlate(carPlateID).subscribe(
+      () => console.log(`Car number plate ID = ${carPlateID} deleted`)
+    );
+    this._carPlateServise.refresh();
   }
 }
